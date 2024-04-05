@@ -3,7 +3,7 @@ const express = require('express'),
     methodOverride = require('method-override'),
     sanitizer = require('sanitizer'),
     app = express(),
-    port = 8000
+    port = 8000 //running port on 8000 with express
 
 app.use(bodyParser.urlencoded({
     extended: false
