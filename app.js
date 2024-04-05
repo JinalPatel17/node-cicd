@@ -22,7 +22,7 @@ let todolist = [];
 
 /* The to do list and the form are displayed */
 app.get('/todo', function (req, res) {
-        res.render('todo.ejs', {
+        res.render('nodeatis.ejs', {
             todolist,
             clickHandler: "func1();"
         });
