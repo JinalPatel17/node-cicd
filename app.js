@@ -1,7 +1,6 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    // Mitigate
     sanitizer = require('sanitizer'),
     app = express(),
     port = 8000
