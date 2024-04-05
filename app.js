@@ -8,7 +8,6 @@ const express = require('express'),
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-// https: //github.com/expressjs/method-override
 app.use(methodOverride(function (req, res) {
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
         // look in urlencoded POST bodies and delete it
@@ -82,5 +81,4 @@ app.get('/todo', function (req, res) {
         // Logging to console
         console.log(`Todolist running on http://0.0.0.0:${port}`)
     });
-// Export app
 module.exports = app;
