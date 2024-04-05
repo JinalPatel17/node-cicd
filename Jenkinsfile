@@ -1,23 +1,23 @@
 pipeline {
-    agent { label "dev-server"}
+    agent { label "devops-server"}
     
     stages {
         
         stage("code"){
             steps{
-                git url: "https://github.com/LondheShubham153/node-todo-cicd.git", branch: "master"
-                echo 'bhaiyya code clone ho gaya'
+                git url: "https://github.com/JinalPatel17/node-cicd.git", branch: "main"
+                echo 'Git clone is compelete'
             }
         }
         stage("build and test"){
             steps{
                 sh "docker build -t node-app-test-new ."
-                echo 'code build bhi ho gaya'
+                echo 'code built is done'
             }
         }
         stage("scan image"){
             steps{
-                echo 'image scanning ho gayi'
+                echo 'scanning images is done'
             }
         }
         stage("push"){
@@ -33,7 +33,7 @@ pipeline {
         stage("deploy"){
             steps{
                 sh "docker-compose down && docker-compose up -d"
-                echo 'deployment ho gayi'
+                echo 'deployment successful'
             }
         }
     }
