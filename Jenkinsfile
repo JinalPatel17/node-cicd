@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "devops-server"}
+    agent any
     
     stages {
         
